@@ -1,0 +1,41 @@
+/* Clinical OMR Suite - Design Tokens */
+:root {
+  /* Colores médicos */
+  --color-primary: #1e40af;
+  --color-primary-light: #3b82f6;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
+  --color-success: #166534;
+
+  /* Dimensiones A4 */
+  --a4-width: 210mm;
+  --a4-height: 297mm;
+  --a4-margin: 20mm;
+  --a4-content-width: calc(var(--a4-width) - (var(--a4-margin) * 2));
+
+  /* Alturas de bloques */
+  --block-height-dicotomic: 40px;
+  --block-height-polytomic: 90px;
+  --block-height-quantitative: 42px;
+
+  /* Tipografía */
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-size-base: 14px;
+  --font-size-sm: 12px;
+}
+
+/* Reset básico */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}

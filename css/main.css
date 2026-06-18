@@ -1,0 +1,165 @@
+/* Clinical OMR Suite - Estilos principales */
+
+.app-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-primary);
+}
+
+.wizard-nav {
+  display: flex;
+  gap: 8px;
+  background: white;
+  padding: 8px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-border);
+  margin-bottom: 32px;
+}
+
+.wizard-step {
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.wizard-step.active {
+  background: var(--color-primary);
+  color: white;
+}
+
+.wizard-step.completed {
+  color: var(--color-success);
+}
+
+/* Contenido del wizard */
+.step-content {
+  display: none;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  padding: 32px;
+  min-height: 520px;
+}
+
+.step-content.active {
+  display: block;
+}
+
+/* Importador */
+.dropzone {
+  border: 2px dashed var(--color-border);
+  border-radius: 16px;
+  padding: 60px 40px;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.dropzone.dragover {
+  border-color: var(--color-primary);
+  background: #f0f7ff;
+}
+
+.dropzone p {
+  margin: 12px 0 0;
+  color: var(--color-text-muted);
+}
+
+/* Vista previa del formulario */
+.form-preview {
+  border: 1px solid var(--color-border);
+  padding: 40px;
+  background: white;
+  max-width: var(--a4-content-width);
+  margin: 0 auto;
+}
+
+.block {
+  margin-bottom: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.block:last-child {
+  border-bottom: none;
+}
+
+/* Botones */
+.btn {
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1e3a8a;
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+/* Impresión */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  
+  .print-area, .print-area * {
+    visibility: visible;
+  }
+  
+  .print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  .page {
+    page-break-after: always;
+    width: var(--a4-width);
+    min-height: var(--a4-height);
+    padding: var(--a4-margin);
+    box-sizing: border-box;
+    background: white;
+    margin: 0 auto;
+  }
+  
+  .page:last-child {
+    page-break-after: auto;
+  }
+}
