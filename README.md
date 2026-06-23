@@ -170,4 +170,3 @@ clinical-omr-suite/
 
 ---
 
-¿Ya tienes Visual Studio Code abierto? Si quieres, puedo darte los pasos exactos uno por uno para que lo ejecutes ahora mismo.
